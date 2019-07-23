@@ -8,6 +8,8 @@ git命令手册：csdn中
 1. 用vscode 提交上。
 
 # tips
+[TOC]
+
 廖雪峰Git教程总结
 1、 几种status：
 2、 配置git：
