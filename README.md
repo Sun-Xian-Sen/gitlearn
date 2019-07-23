@@ -33,7 +33,7 @@ git命令手册：csdn中
 
 
 
-1、 几种status：
+## 1、 **几种status：**
 
 nothing to commit(working directort clean)  //什么都没有改动
 
@@ -43,7 +43,7 @@ Changes to be commited.                          // 有add. 但没commit
 
  
 
-2、 配置git：
+## 2、 **配置git：**
 
 git config --m user.name "yourname"
 
@@ -53,7 +53,7 @@ git config --m user.email "youremail"
 
 初始化一个Git仓库： git init 
 
-       添加文件到Git仓库，分两步：
+​       添加文件到Git仓库，分两步：
 
    第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；
 
@@ -77,7 +77,7 @@ git add 的各种区别:
 
  
 
-3、 版本回退：
+##  3、 **版本回退：**
 
 git  log ：告诉我们版本历史记录
 
@@ -91,7 +91,7 @@ git reset --hard HEAD~100
 
  
 
-4、 版本前进：
+## 4、 **版本前进：**
 
 git reflog : 用来记录用户的每一次命令,查看版本号
 
@@ -99,13 +99,13 @@ git reset --hard 版本号
 
  
 
-5、 add和Git 的意义：
+## 5、 **add和Git 的意义：**
 
 你已理解了Git是如何跟踪修改的，你工作的地方叫工作区，如果不add到暂存区，那就不会加入到commit中。
 
  
 
-6、 撤销工作区（修改或删除）：
+## 6、 **撤销工作区（修改或删除）：**
 
 git checkout -- <file>
 
@@ -117,9 +117,9 @@ git checkout -- <file>
 
  
 
-7、 撤销暂存区修改：
+## 7、 **撤销暂存区修改：**
 
-       git reset HEAD <file>   // 把暂存区的修改撤销，从新放回工作区
+​       git reset HEAD <file>   // 把暂存区的修改撤销，从新放回工作区
 
 场景1： 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命  令git checkout -- file。
 
@@ -129,7 +129,7 @@ git checkout -- <file>
 
  
 
-8、 删除文件：
+## 8、 **删除文件：**
 
 场景1：确实要删除版本库里的文件：git rm file 并且 git commit
 
@@ -137,19 +137,19 @@ git checkout -- <file>
 
  
 
-9、 添加远程库:
+## 9、 **添加远程库:**
 
-      0，移除已关联的远程库（如果之前已关联）
+​0. 移除已关联的远程库（如果之前已关联）
 
-	git remote rm  origin    (添加多应用后就不叫origin)
+​	git remote rm  origin    (添加多应用后就不叫origin)
 
 1. 关联远程库：(默认名叫：origin. 添加多个应用后就用自定义名字)
 
-    git remote add origin git@server-name.com : Sun-Xian-Sen/repo-name.git
+​    git remote add origin git@server-name.com : Sun-Xian-Sen/repo-name.git
 
-	git remote add github git@github.com : Sun-Xian-Sen/repo-name.git
+​	git remote add github git@github.com : Sun-Xian-Sen/repo-name.git
 
-	git remote add gitee  git@gitee.com :  Sun-Xian-Sen/repo-name.git
+​	git remote add gitee  git@gitee.com :  Sun-Xian-Sen/repo-name.git
 
 2. 第一次通常推送所有分支内容：git push -u origin master
 
@@ -157,7 +157,7 @@ git checkout -- <file>
 
  
 
-10、 从远程库克隆：
+## 10、 **从远程库克隆：**
 
 (怎么把Github上的repository给下载到本地)
 
@@ -165,7 +165,7 @@ git clone git@github.com:yourName/yourRepository.git
 
  
 
-11、 Git鼓励大量使用分支：
+## 11、 **Git鼓励大量使用分支：**
 
 查看分支：git branch
 
@@ -179,7 +179,7 @@ git clone git@github.com:yourName/yourRepository.git
 
 删除分支：git branch -d <name>
 
-     使用套路
+​     **使用套路**
 
 先创建+切换：git checkout -b <name>
 
@@ -193,7 +193,7 @@ git clone git@github.com:yourName/yourRepository.git
 
  
 
-12、 分支管理策略：
+## 12、 **分支管理策略：**
 
 若不用快速合并，则分支不丢失，它在合并是已经创建又
 
@@ -209,9 +209,9 @@ git log --graph --pretty=oneline --abbrev-commit
 
 可用配置别名简写！
 
- 
 
-13、 Bug分支：
+
+## 13、 **Bug分支：**
 
 你在工作的时候，突然要改个bug,而又不想提交当前的
 
@@ -237,7 +237,7 @@ git stash list   列出所有的藏匿内容
 
  
 
-14、 多人协作：
+## 14、 **多人协作：**
 
 查看远程库信息，使用git remote -v；
 
@@ -259,7 +259,7 @@ git branch --set-upstream branch-name origin/branch-name；
 
  
 
-15、 标签管理：
+## 15、 **标签管理：**
 
 tag 是一个版本的快照，比如QQ 8.0版，比你的commit号6a5819e
 
@@ -267,7 +267,7 @@ tag 是一个版本的快照，比如QQ 8.0版，比你的commit号6a5819e
 
  
 
-16、 创建标签：
+## 16、 **创建标签：**
 
 1，用于新建一个标签，默认为HEAD，也可以指定一个commit id：git tag <name>,
 
@@ -279,7 +279,7 @@ tag 是一个版本的快照，比如QQ 8.0版，比你的commit号6a5819e
 
  
 
-17、 操作标签：
+## 17、 **操作标签：**
 
 推送一个本地标签: git push origin <tagname>
 
@@ -291,15 +291,15 @@ tag 是一个版本的快照，比如QQ 8.0版，比你的commit号6a5819e
 
  
 
-18、 忽略特殊文件：
+## 18、 **忽略特殊文件：**
 
-1.你的工作区中有些文件不能被上传的.编辑 <.gitignore>文件
+1，你的工作区中有些文件不能被上传的，编辑 <.gitignore>文件
 
-2.提交 .gitignore 文件即可
+2，提交 .gitignore 文件即可
 
  
 
-19、 配置别名：
+## 19、 **配置别名：**
 
 方法1：
 
